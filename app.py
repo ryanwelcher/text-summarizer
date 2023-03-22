@@ -11,7 +11,7 @@ try:
   
   st.title("Transcript Summarizer")
 
-  prompt_text = st.text_area(label="Prompt to use:", value="summarize this video transcript text:")
+  prompt_text = st.text_area(label="Prompt to use:", value="summarize this video transcript text")
   
   input_text = st.text_area(label="Enter full text:", value="", height=250)
   st.button(
