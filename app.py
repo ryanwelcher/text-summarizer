@@ -1,17 +1,14 @@
 import streamlit as st
-import openai
 import os
 from text_summarizer.functions import summarizeChat
 
 try:
-  openai.api_key = os.getenv('OPENAI_KEY')
-  
   if "summary" not in st.session_state:
       st.session_state["summary"] = ""
   
   st.title("Transcript Summarizer")
 
-  prompt_text = st.text_area(label="Prompt to use:", value="summarize this video transcript text")
+  prompt_text = st.text_area(label="Prompt to use:", value="Summarize this video transcript text in the first person plural as streamer RyanWelcherCodes")
   
   input_text = st.text_area(label="Enter full text:", value="", height=250)
   st.button(
